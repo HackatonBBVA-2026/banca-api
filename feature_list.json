@@ -55,8 +55,8 @@
       "verification": [
         ".venv/bin/pytest tests/test_api.py -v"
       ],
-      "evidence": "2026-11-14T21:56:42Z exit=0 commit=ffe4dc1 cmds=1 tail: tests/test_simulation.py::test_execute_tick_account_not_found PASSED     [ 95%] / tests/test_simulation.py::test_execute_tick_empty_database PASSED        [ 97%] / tests/test_simulation.py::test_simulation_engine_get_status PASSED       [ 98%] / tests/test_simulation.py::test_concurrent_ticks_serial_integrity PASSED  [100%] / ============================= 67 passed in 11.32s ==============================",
-      "testedAt": "2026-11-14T21:56:42Z",
+      "evidence": "2026-11-14T21:58:17Z exit=0 commit=2a43651 cmds=1 tail: tests/test_simulation.py::test_execute_tick_account_not_found PASSED     [ 95%] / tests/test_simulation.py::test_execute_tick_empty_database PASSED        [ 97%] / tests/test_simulation.py::test_simulation_engine_get_status PASSED       [ 98%] / tests/test_simulation.py::test_concurrent_ticks_serial_integrity PASSED  [100%] / ============================= 67 passed in 11.25s ==============================",
+      "testedAt": "2026-11-14T21:58:17Z",
       "attempts": 0,
       "last_failure": ""
     },
