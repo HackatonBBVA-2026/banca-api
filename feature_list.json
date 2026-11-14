@@ -27,10 +27,14 @@
     {
       "id": "F03-seeder",
       "description": "Deterministic 180-day synthetic data generator with seed=42, balance integrity, and edge cases",
-      "status": "planned",
+      "status": "done",
       "verification": [
         ".venv/bin/pytest tests/test_seed.py -v"
-      ]
+      ],
+      "evidence": "2026-11-14T21:41:38Z exit=0 commit=7c9fc82 cmds=1 tail: tests/test_seed.py::test_seed_database_entities_and_counts PASSED        [ 87%] / tests/test_seed.py::test_seed_movements_integrity_and_edge_cases PASSED  [ 91%] / tests/test_seed.py::test_seed_database_idempotency_and_force PASSED      [ 95%] / tests/test_seed.py::test_seed_cli_execution PASSED                       [100%] / ============================== 24 passed in 3.72s ==============================",
+      "testedAt": "2026-11-14T21:41:38Z",
+      "attempts": 0,
+      "last_failure": ""
     },
     {
       "id": "F04-broadcaster-simulation",
