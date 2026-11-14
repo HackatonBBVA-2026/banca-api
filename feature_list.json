@@ -63,11 +63,15 @@
     {
       "id": "F06-documentation",
       "description": "Complete README documentation, data dictionary, cURL examples, JS SSE snippet, and clean verification suite",
-      "status": "planned",
+      "status": "done",
       "verification": [
         ".venv/bin/pytest tests -v",
         "test -f README.md"
-      ]
+      ],
+      "evidence": "2026-11-14T22:02:36Z exit=0 commit=9a45a2b cmds=2 tail: tests/test_simulation.py::test_execute_tick_account_not_found PASSED     [ 95%] / tests/test_simulation.py::test_execute_tick_empty_database PASSED        [ 97%] / tests/test_simulation.py::test_simulation_engine_get_status PASSED       [ 98%] / tests/test_simulation.py::test_concurrent_ticks_serial_integrity PASSED  [100%] / ============================= 70 passed in 10.36s ==============================",
+      "testedAt": "2026-11-14T22:02:36Z",
+      "attempts": 0,
+      "last_failure": ""
     }
   ]
 }
