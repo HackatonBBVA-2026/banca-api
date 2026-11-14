@@ -7,8 +7,8 @@
       "verification": [
         ".venv/bin/pytest tests/test_database.py -v"
       ],
-      "evidence": "2026-11-14T21:32:05Z exit=0 commit=none cmds=1 tail: tests/test_database.py::test_sqlite_pragmas_and_wal PASSED               [ 57%] / tests/test_database.py::test_all_tables_created PASSED                   [ 71%] / tests/test_database.py::test_insert_and_relations PASSED                 [ 85%] / tests/test_database.py::test_foreign_key_enforcement PASSED              [100%] / ============================== 7 passed in 1.12s ===============================",
-      "testedAt": "2026-11-14T21:32:05Z",
+      "evidence": "2026-11-14T21:32:57Z exit=0 commit=c42d521 cmds=1 tail: tests/test_database.py::test_sqlite_pragmas_and_wal PASSED               [ 57%] / tests/test_database.py::test_all_tables_created PASSED                   [ 71%] / tests/test_database.py::test_insert_and_relations PASSED                 [ 85%] / tests/test_database.py::test_foreign_key_enforcement PASSED              [100%] / ============================== 7 passed in 1.15s ===============================",
+      "testedAt": "2026-11-14T21:32:57Z",
       "attempts": 0,
       "last_failure": ""
     },
