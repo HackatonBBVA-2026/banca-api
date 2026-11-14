@@ -14,6 +14,7 @@ Simulador bancario transaccional sintético y neutral desarrollado para el **Hac
 6. [Integración de Streaming en Tiempo Real (SSE)](#integración-de-streaming-en-tiempo-real-sse)
 7. [Variables de Entorno](#variables-de-entorno)
 8. [Pruebas y Verificación](#pruebas-y-verificación)
+9. [Despliegue con Docker y Dokploy](#despliegue-con-docker-y-dokploy)
 
 ---
 
@@ -421,6 +422,40 @@ El proyecto sigue la disciplina estricta de **Test-Driven Development (TDD)** y 
 # Validar la integridad de todo el repositorio
 ./init.sh
 ```
+
+---
+
+## Despliegue con Docker y Dokploy
+
+El repositorio incluye un `Dockerfile` de producción y un archivo `docker-compose.yml` listos para ser desplegados en [Dokploy](https://dokploy.com/), Coolify o cualquier host con Docker.
+
+### Especificaciones del Contenedor
+- **Imagen Base:** `python:3.11-slim`
+- **Puerto:** `8000`
+- **Healthcheck:** Verificación nativa con `curl` cada 30 segundos apuntando a `/health`.
+- **Persistencia SQLite WAL:** Directorio `/app/data` para garantizar la persistencia de `banca.db`, `banca.db-wal` y `banca.db-shm`.
+
+### Despliegue con Docker Compose
+```bash
+docker compose up -d --build
+```
+
+### Guía de Configuración en Dokploy
+1. **Application Type:** Docker o Docker Compose.
+2. **Repository:** Vincular el repositorio `banca-api` (rama `main`).
+3. **Port:** `8000`.
+4. **Persistent Volume:**
+   - **Host Path:** `/var/lib/dokploy/banca-data` (o `./data`)
+   - **Container Path:** `/app/data`
+5. **Health Check:**
+   - **Path:** `/health`
+   - **Interval:** `30`
+   - **Timeout:** `5`
+6. **Variables de entorno (Opcionales):**
+   - `DATABASE_URL=sqlite+aiosqlite:////app/data/banca.db`
+   - `SIMULATION_ENABLED=True`
+   - `SIMULATION_INTERVAL_MIN=10`
+   - `SIMULATION_INTERVAL_MAX=30`
 
 ---
 

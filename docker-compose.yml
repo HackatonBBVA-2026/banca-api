@@ -1,0 +1,23 @@
+services:
+  banca-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: banca-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:////app/data/banca.db
+      - SEED_VALUE=42
+      - SIMULATION_ENABLED=True
+      - SIMULATION_INTERVAL_MIN=10
+      - SIMULATION_INTERVAL_MAX=30
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s

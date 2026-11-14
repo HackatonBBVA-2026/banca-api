@@ -1,0 +1,42 @@
+# Git and repo metadata
+.git
+.gitignore
+.dockerignore
+AGENTS.md
+CLAUDE.md
+feature_list.json
+progress.md
+session-handoff.md
+shell.nix
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Testing and coverage
+.pytest_cache/
+pytest.ini
+tests/
+.coverage
+htmlcov/
+
+# Local databases and persistent data
+*.db*
+*.sqlite*
+data/
+
+# Environment files
+.env
+
+# Documentation
+docs/
+
+# Compose files
+docker-compose*.yml
