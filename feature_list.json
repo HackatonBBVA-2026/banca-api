@@ -1,0 +1,57 @@
+{
+  "features": [
+    {
+      "id": "F01-models-db",
+      "description": "Database connection layer with SQLite WAL mode and SQLAlchemy 2.0 async models for all core and support entities",
+      "status": "done",
+      "verification": [
+        ".venv/bin/pytest tests/test_database.py -v"
+      ],
+      "evidence": "2026-11-14T21:32:05Z exit=0 commit=none cmds=1 tail: tests/test_database.py::test_sqlite_pragmas_and_wal PASSED               [ 57%] / tests/test_database.py::test_all_tables_created PASSED                   [ 71%] / tests/test_database.py::test_insert_and_relations PASSED                 [ 85%] / tests/test_database.py::test_foreign_key_enforcement PASSED              [100%] / ============================== 7 passed in 1.12s ===============================",
+      "testedAt": "2026-11-14T21:32:05Z",
+      "attempts": 0,
+      "last_failure": ""
+    },
+    {
+      "id": "F02-schemas",
+      "description": "Pydantic v2 schemas for all entities, requests, responses, filters, and pagination",
+      "status": "planned",
+      "verification": [
+        ".venv/bin/pytest tests/test_schemas.py -v"
+      ]
+    },
+    {
+      "id": "F03-seeder",
+      "description": "Deterministic 180-day synthetic data generator with seed=42, balance integrity, and edge cases",
+      "status": "planned",
+      "verification": [
+        ".venv/bin/pytest tests/test_seed.py -v"
+      ]
+    },
+    {
+      "id": "F04-broadcaster-simulation",
+      "description": "SSE fan-out event broadcaster with multi-subscriber registry, heartbeat pings, and dynamic simulation engine",
+      "status": "planned",
+      "verification": [
+        ".venv/bin/pytest tests/test_broadcaster.py tests/test_simulation.py -v"
+      ]
+    },
+    {
+      "id": "F05-api-endpoints",
+      "description": "FastAPI REST endpoints and GET /movimientos/stream SSE route with lifespan autoseed and tick trigger",
+      "status": "planned",
+      "verification": [
+        ".venv/bin/pytest tests/test_api.py -v"
+      ]
+    },
+    {
+      "id": "F06-documentation",
+      "description": "Complete README documentation, data dictionary, cURL examples, JS SSE snippet, and clean verification suite",
+      "status": "planned",
+      "verification": [
+        ".venv/bin/pytest tests -v",
+        "test -f README.md"
+      ]
+    }
+  ]
+}
