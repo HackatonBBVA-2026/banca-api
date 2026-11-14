@@ -19,8 +19,8 @@
       "verification": [
         ".venv/bin/pytest tests/test_schemas.py -v"
       ],
-      "evidence": "2026-11-14T21:36:08Z exit=0 commit=34bdb44 cmds=1 tail: tests/test_schemas.py::test_movimiento_response_from_orm PASSED          [ 85%] / tests/test_schemas.py::test_paginated_movimientos_calculation PASSED     [ 90%] / tests/test_schemas.py::test_tick_override_request_defaults_and_validation PASSED [ 95%] / tests/test_schemas.py::test_simulacion_status_response PASSED            [100%] / ============================== 20 passed in 1.07s ==============================",
-      "testedAt": "2026-11-14T21:36:08Z",
+      "evidence": "2026-11-14T21:36:37Z exit=0 commit=df9269b cmds=1 tail: tests/test_schemas.py::test_movimiento_response_from_orm PASSED          [ 85%] / tests/test_schemas.py::test_paginated_movimientos_calculation PASSED     [ 90%] / tests/test_schemas.py::test_tick_override_request_defaults_and_validation PASSED [ 95%] / tests/test_schemas.py::test_simulacion_status_response PASSED            [100%] / ============================== 20 passed in 1.19s ==============================",
+      "testedAt": "2026-11-14T21:36:37Z",
       "attempts": 0,
       "last_failure": ""
     },
