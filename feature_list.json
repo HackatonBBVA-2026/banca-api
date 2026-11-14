@@ -39,10 +39,14 @@
     {
       "id": "F04-broadcaster-simulation",
       "description": "SSE fan-out event broadcaster with multi-subscriber registry, heartbeat pings, and dynamic simulation engine",
-      "status": "planned",
+      "status": "done",
       "verification": [
         ".venv/bin/pytest tests/test_broadcaster.py tests/test_simulation.py -v"
-      ]
+      ],
+      "evidence": "2026-11-14T21:48:38Z exit=0 commit=0ee273a cmds=1 tail: tests/test_simulation.py::test_execute_tick_account_not_found PASSED     [ 92%] / tests/test_simulation.py::test_execute_tick_empty_database PASSED        [ 95%] / tests/test_simulation.py::test_simulation_engine_get_status PASSED       [ 97%] / tests/test_simulation.py::test_concurrent_ticks_serial_integrity PASSED  [100%] / ============================== 40 passed in 4.73s ==============================",
+      "testedAt": "2026-11-14T21:48:38Z",
+      "attempts": 0,
+      "last_failure": ""
     },
     {
       "id": "F05-api-endpoints",
